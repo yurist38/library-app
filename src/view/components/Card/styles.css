@@ -35,13 +35,26 @@
 
 .cardTitle {
   width: 100%;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
+  position: relative; */
+}
+
+.author {
+  width: 100%;
 }
 
 .cardHeader {
   width: 100%;
   box-sizing: border-box;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+
+.detailsContainer {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.875rem;
 }

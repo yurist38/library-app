@@ -8,3 +8,7 @@ export default interface IBook {
   title: string;
   year: number;
 }
+
+export interface IBookWithId extends IBook {
+  id: number;
+}

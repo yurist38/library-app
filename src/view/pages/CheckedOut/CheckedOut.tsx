@@ -7,31 +7,34 @@ import { IGlobalState } from '../../../reducers';
 import CardsList from '../../components/CardsList';
 import MainLayout from '../../layouts/MainLayout';
 
-export interface IBrowseStateProps {
+export interface ICheckedOutStateProps {
   books: IBookWithId[];
   filter: string;
+  cart: number[];
 }
 
-class Browse extends Component<IBrowseStateProps> {
+class CheckedOut extends Component<ICheckedOutStateProps> {
   private getBooksFiltered: () => IBookWithId[] = () => {
-    const { books, filter } = this.props;
+    const { books, cart, filter } = this.props;
+    const booksInCart = cart.sort().map((id: number) => books[id]);
 
-    return filter ? books.filter((b) => filterBook(b, filter)) : books;
+    return filter ? booksInCart.filter((b) => filterBook(b, filter)) : booksInCart;
   }
 
   public render() {
 
     return (
-      <MainLayout activeMenuItemId={1}>
+      <MainLayout activeMenuItemId={2}>
         <CardsList books={this.getBooksFiltered()} />
       </MainLayout>
     );
   }
 }
 
-const mapStateToProps = (state: IGlobalState): IBrowseStateProps => ({
+const mapStateToProps = (state: IGlobalState): ICheckedOutStateProps => ({
   books: state.books,
+  cart: state.cart,
   filter: state.search.filter,
 });
 
-export default connect(mapStateToProps)(Browse);
+export default connect(mapStateToProps)(CheckedOut);
