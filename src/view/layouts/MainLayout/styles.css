@@ -1,0 +1,16 @@
+:root {
+  --left-column-width: 240px;
+  --header-height: 60px;
+}
+
+.mainContent {
+  width: calc(100% - var(--left-column-width));
+  height: calc(100% - var(--header-height));
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: Roboto, serif;
+}

@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const constants = require('../common/constants');
 
 const { dev, prod } = constants.environments;
@@ -51,11 +52,15 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css'],
   },
+  performance: {
+    hints: false
+  },
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve('./src'),
-    proxy: {
-      '/img': constants.imgUrl,
-    }
   },
+  plugins: [
+    new CopyWebpackPlugin([ { from: path.resolve('./public/'), to: path.resolve('./build') } ]),
+    new CopyWebpackPlugin([ { from: path.resolve('./src/index.html'), to: path.resolve('./build') } ]),
+  ]
 };

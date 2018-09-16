@@ -1,0 +1,19 @@
+.header.bar {
+  height: var(--header-height);
+  width: calc(100% - var(--left-column-width));
+
+  .searchInput {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 40px;
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    padding-left: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    background-image: url('/img/search-icon.png');
+    background-position: 15px 50%;
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+  }
+}

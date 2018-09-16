@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import booksActions from './actions/books';
 import configureStore from './configureStore';
-import Browse from './pages/Browse';
+import Browse from './view/pages/Browse';
 
 const history = createHistory();
 const store = configureStore(history);

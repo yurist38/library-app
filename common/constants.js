@@ -3,7 +3,7 @@ const environments = {
   prod: 'production',
 };
 
-const imgUrl = 'http://www.100bestbooks.xyz/static/images';
+const imgUrl = 'http://www.100bestbooks.xyz/static/';
 const booksUrl = 'https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json';
 
 module.exports = {
