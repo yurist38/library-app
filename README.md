@@ -1,23 +1,22 @@
-# The Library
+# Library
 
-Frontend web application for online library.
+Test frontend web application.
 "Reserved" section is mocked, its items are radnomly generated on runtime.
 
-### Tech stack:
+It's deployed to [library-app-alpha.vercel.app](https://library-app-alpha.vercel.app/)
+
+## Tech stack
+
 * React.js
 * Redux.js + Saga
 * TypeScript
 
-### Development
-* `$> npm i`
+## Development
+
+* `$> npm ci`
 * `$> npm run dev`
 
-### Build production
-* `$> npm i`
-* `$> npm run build:production`
+## Build production
 
-### To be done (missing parts)
-* Unit tests
-* Mobile view
-* Multi-user interface and functionality
-* Finish styling
+* `$> npm ci`
+* `$> npm run build:production`
